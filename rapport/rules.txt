@@ -1,0 +1,52 @@
+Scénario : 
+Les aliens envahissent la planète ! Leur vaisseau s'est posé pas loin d'une ville. Décidés à conquérir la planète, il prennent forme humaine pour tromper les habitants.
+
+règles :
+Les joueurs sont divisés en deux camps : les habitants innocents et civilisés d'Orléans Town et les putin d'envahisseurs barbares aliens. Le but des gens civilisés est d'exterminer les aliens et celui des aliens est d'éradiquer la race humaine (donc tuer tout les habitants d'abord). Le jeu se déroule en tours, alterant deux phases : le jour et la nuit. 
+Durant la nuit : Les habitants dorment à point fermer, ainsi les aliens établissent un vote pour décider lequel des villageois tuer. 
+Durant le jour : au début du jour l'habitant tué est révélé. Les habitants ne veulent pas que ce crime reste impuni et souhaite tuer les aliens toujours dissimulés parmis eux. Un vote entre tous les joueurs prend donc place pour désigner la personne à tuer. 
+Certains habitants possèdent un rôle particulier, le détail est expliqué plus bas.
+
+roles :
+
+villageois
+---------
+droit de vote jour
+
+
+loup garou (alien)
+------------------
+droit de vote jour
+droit de vote nuit 
+
+voyante
+-------
+droit de vote jour 
+peut découvrir un role au début de la nuit
+
+sorcière
+--------
+droit de vote jour 
+peut empoisonner ou empecher la mort d'une personne
+
+cupidon
+-------
+droit de vote jour 
+premiere nuit : designe un couple (le couple désigner doit gagner esemble ou meurt ensemble quand l'un des deux meurt)
+
+voleur 
+------
+droit de vote jour 
+premiere nuit : peut echanger son role avec une carte non distribuée (ou avec un joueur suivant les règles)
+
+petite fille (hybrid alien humaine)
+------------
+droit de vote jour 
+comprend le langage alien et les ecoutes pendant a nuit sans reconnaitres les voix.
+
+chasseur
+--------
+droit de vote jour 
+quand il meurt il désigne une personne qui meurt avec lui.
+
+
