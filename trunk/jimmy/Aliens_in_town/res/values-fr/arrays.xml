@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="names_players_list">
+
+        <!-- En A -->
+        <item>Gars pas net</item>
+        <item>Gars moyen</item>
+        <item>Armageddon</item>
+        <item>Presque malin</item>
+        <item>Amerique pour toujours</item>
+        <item>Animal</item>
+        <item>Adorateur des pommes</item>
+        <item>Australie pour toujours</item>
+        <item>Adele Adkins</item>
+
+        <!-- EN B -->
+        <item>Bébé justin</item>
+        <item>Etoile bleue</item>
+        <item>Bachelor</item>
+        <item>Bacon et crevette</item>
+        <item>Banquier alors tuez moi</item>
+        <item>Beauté</item>
+        <item>Habitué de la trahison</item>
+        <item>Benjamin Castaldi</item>
+        <item>Boxing est un plus</item>
+
+        <!-- EN C -->
+        <item>Canada pour toujours</item>
+        <item>Directeur alors écoutez</item>
+        <item>La chine pour toujours</item>
+        <item>Climatologist</item>
+        <item>Des preuves est un plus</item>
+        <item>Conspirateur</item>
+        <item>Contributeur à la tuerie</item>
+        <item>Cooperateur si je veux</item>
+        <item>Cornelius Nyungura ou Corneille</item>
+
+        <!-- EN D -->
+        <item>Danemark pour toujours</item>
+        <item>Dealer appelez moi</item>
+        <item>La dexterité ne sers pas</item>
+        <item>Gars difficile</item>
+        <item>Nain</item>
+        <item>Adorateur des dauphins</item>
+        <item>La discipline est tout</item>
+        <item>Dieudonné M bala M bala</item>
+        <item>Daniel Day-Lewise</item>
+
+        <!-- EN E -->
+        <item>Egyptien dans la ville</item>
+        <item>Adorateur des éléphants</item>
+        <item>Gars enthousiaste</item>
+        <item>Ethiopie pour toujours</item>
+        <item>Echange avec moi</item>
+        <item>Cadre alors tuez moi</item>
+        <item>Pro de l\'espionnage</item>
+        <item>L\'europe va y arrivé</item>
+        <item>Eminem dans la ville</item>
+
+        <!-- EN F -->
+        <item>Fermier</item>
+        <item>Felonie est mon nom</item>
+        <item>Supporteur d escrime</item>
+        <item>Pêcheur en week-end</item>
+        <item>Adepte de football</item>
+        <item>Vois dans l avenir attention</item>
+        <item>France pour toujours</item>
+        <item>Des funerailles bientôt</item>
+        <item>Lecteur de fantasy</item>
+
+        <!-- EN G -->
+        <item>Gangster</item>
+        <item>Geek et alors</item>
+        <item>Allemage pour toujours</item>
+        <item>La fille dont vous rêvez</item>
+        <item>Accro des jeux de hasard</item>
+        <item>Professeur de géométrie</item>
+        <item>Chef de la mafia</item>
+        <item>Gaga stephani</item>
+        <item>Garou</item>
+
+        <!-- EN H -->
+        <item>Humain ou pas</item>
+        <item>Coiffeur</item>
+        <item>Chasseur en traque</item>
+        <item>Monteur de chevaux</item>
+        <item>Gars honorable</item>
+        <item>Etudiant à l université</item>
+        <item>Assommer tout le monde</item>
+        <item>Hallyday Johnny</item>
+        <item>Docteur sauvez moi</item>
+
+        <!-- EN I -->
+        <item>L\'idiot du village</item>
+        <item>Diplomate idéaliste</item>
+        <item>Idole en jeu</item>
+        <item>Immunité pour moi</item>
+        <item>Gars ironique</item>
+        <item>Adorateur des insectes</item>
+        <item>L\'information est un plus</item>
+        <item>L\'immortel</item>
+        <item>Chanteur d\'indochine</item>
+
+        <!-- EN J -->
+        <item>Japon pour toujours</item>
+        <item>Personne jovial</item>
+        <item>En quête de justice</item>
+        <item>Petite ami jalouse</item>
+        <item>Joaillier</item>
+        <item>Journalist protégé moi</item>
+        <item>Janvier arrive</item>
+        <item>Jordan je t\'aime</item>
+        <item>Jesse Eisenber le survivant</item>
+
+        <!-- EN K -->
+        <item>Korea pour toujours</item>
+        <item>Tueur déguisé</item>
+        <item>Le roi dans son royaume</item>
+        <item>Gardien de chatons</item>
+        <item>Embrasse moi ou meurt</item>
+        <item>Clavier ou es-tu</item>
+        <item>Kleptomane</item>
+        <item>Kilos partez partez</item>
+        <item>Kaka allez Milan</item>
+
+        <!-- EN L -->
+        <item>Jax et sa lanterne en jeu</item>
+        <item>Avocat alors attention</item>
+        <item>La limonade c\'est si bon</item>
+        <item>Adorateur des leopards</item>
+        <item>Monter en grade facile</item>
+        <item>Aborateur des lézards</item>
+        <item>Loyauté à l\'équipe</item>
+        <item>Adorateur des lions</item>
+        <item>Lagaf</item>
+
+        <!-- EN M -->
+        <item>Martyr comme toujours</item>
+        <item>Professeur de maths</item>
+        <item>Joyeux noel les gars</item>
+        <item>Adorateur de Misfit</item>
+        <item>Adorateur des singes</item>
+        <item>Le monarque en ville</item>
+        <item>Personne morale</item>
+        <item>Mimi mouse</item>
+        <item>Tueur sous couverture</item>
+
+        <!-- EN N -->
+        <item>Nabilla non mais allo</item>
+        <item>Negociateur</item>
+        <item>Adorateur des night-clubs</item>
+        <item>Cauchemar c\'est moi</item>
+        <item>Débutant en jeu</item>
+        <item>Personne à l\'ouest</item>
+        <item>Nymphoman</item>
+        <item>Ne jamais dire jamais</item>
+        <item>Gars normal</item>
+
+        <!-- EN O -->
+        <item>Engagement à l\'équipe</item>
+        <item>Observateur</item>
+        <item>Vieillard</item>
+        <item>Le online pour toujours</item>
+        <item>Personne opportuniste</item>
+        <item>Oceanographiste</item>
+        <item>En poste</item>
+        <item>Personne optimiste</item>
+        <item>Orelsan dans la ville</item>
+
+        <!-- EN P -->
+        <item>Amateur de cullottes</item>
+        <item>Un paradox est un paradox</item>
+        <item>Patriote</item>
+        <item>Système noeud à noeud</item>
+        <item>La perspicacité est un plus</item>
+        <item>Pharmaciste</item>
+        <item>Pianiste</item>
+        <item>Amateur d\'oreillers</item>
+        <item>Pitbull juste pour vous</item>
+
+        <!-- EN Q -->
+        <item>Quantité et non qualité</item>
+        <item>Remet toi en question</item>
+        <item>La reine du jeu</item>
+        <item>La reine est la</item>
+        <item>Qualité et non quantité</item>
+        <item>Créateur d\'embrouilles</item>
+        <item>QSDFGHJKLM</item>
+        <item>Collecteur de quartz</item>
+        <item>Quentin</item>
+
+        <!-- EN R -->
+        <item>Adorateur des lapins</item>
+        <item>Le frigo est trop loin</item>
+        <item>Résident de New york</item>
+        <item>Distributeur</item>
+        <item>En quête de revanche</item>
+        <item>Ecouteur de rapsody</item>
+        <item>Ruby m.... Ruby m....</item>
+        <item>Rageux</item>
+        <item>Rihanna chante pour vous</item>
+
+        <!-- EN S -->
+        <item>Saturne est magnifique</item>
+        <item>Samedi soir</item>
+        <item>Chanteur en pause</item>
+        <item>Amateur de cours</item>
+        <item>Chasseur de requins</item>
+        <item>Belle-soeur</item>
+        <item>Je dors en faites</item>
+        <item>Les logiciels en folie</item>
+        <item>Shakira bouge pour vous</item>
+
+        <!-- EN T -->
+        <item>Aujourd\'hui est le jour</item>
+        <item>Taiwan pour toujours</item>
+        <item>Professeur</item>
+        <item>Amateur de tennis</item>
+        <item>Voleur en couverture</item>
+        <item>Jeudi donc plus qu\'un</item>
+        <item>Vendeur</item>
+        <item>Transformers enfer oui</item>
+
+        <!-- EN U -->
+        <item>Le joueur ultime</item>
+        <item>Personne sans emploi</item>
+        <item>Joeur inconscient</item>
+        <item>Les états unis pour toujours</item>
+        <item>Etudiant à l\'université</item>
+        <item>Professeur à l\'université</item>
+        <item>Joueur pour la première fois</item>
+        <item>Utopiste</item>
+        <item>Mocheté</item>
+
+        <!-- EN V -->
+        <item>La vengeance vous suivra</item>
+        <item>Verdicte coupable</item>
+        <item>Joueur vétéran </item>
+        <item>Vigil en poste</item>
+        <item>Violence inderdite plz</item>
+        <item>Visiteur en test</item>
+        <item>Joueur de valeur</item>
+        <item>La virtuosité en personne</item>
+        <item>Volontaire au meurtre</item>
+
+        <!-- EN W -->
+        <item>Arme humaine</item>
+        <item>Amateur de vin</item>
+        <item>Sorcière</item>
+        <item>Gagne à chaque fois</item>
+        <item>Gagnant enfin j\'espère</item>
+        <item>Guerrier</item>
+        <item>Le whiskey est un plus</item>
+        <item>Femme en folie</item>
+        <item>Adorateur des loups</item>
+
+        <!-- EN X -->
+        <item>Collectionneur de xenotimes</item>
+        <item>Xanthamides chercheur</item>
+        <item>Xylophoniste</item>
+        <item>Xerographiste</item>
+        <item>Débutant au Xylophone</item>
+        <item>Personne étrange suspicieuse</item>
+        <item>Collectionneur de Xenocryst</item>
+        <item>Conducteur de Xebec</item>
+        <item>Xylopyrographiste</item>
+
+        <!-- EN Y -->
+        <item>Jeune fille</item>
+        <item>Conducteur de yacht</item>
+        <item>Jeunot</item>
+        <item>Amateur de jaune d\'oeuf</item>
+        <item>Amateur de yaourts</item>
+        <item>Amateur de soies</item>
+        <item>Oui je suis un idiot</item>
+        <item>Jeune en mauvais état</item>
+        <item>Jeune fille folle</item>
+
+        <!-- EN Z -->
+        <item>Zoologiste</item>
+        <item>Jamais perdu</item>
+        <item>Adepte du zoo</item>
+        <item>Zachary Quinto</item>
+        
+    </array>
+
+</resources>
