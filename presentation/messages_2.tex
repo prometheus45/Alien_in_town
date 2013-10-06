@@ -1,8 +1,19 @@
 \documentclass[pdftex,12pt,a4paper]{report}
 \usepackage[pdftex] {graphicx}
 \usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
 \usepackage{url}
+\usepackage{adjustbox}
 \newcommand{\HRule} {\rule{\linewidth} {0.5mm}}
+
+\newcommand*{\MyIncludeGraphics}[2][]{%
+\begin{adjustbox}{max size={200mm}{200mm}}
+    \includegraphics[#1]{#2}%
+\end{adjustbox}
+}
+
+\usepackage{epsfig}
+\usepackage{epstopdf}
 \begin{document}
 
 % PREMIERE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,10 +54,12 @@
 % Contains by chapters.
 
 % USE INPUTS 
+%\begin{wrapfigure}{r}{40mm}
+ % \centering
+ \centerline{ \includegraphics[width=18cm, height=14cm]{gamecreation3.png}}
+%\end{wrapfigure}
 
-\input{chapters/introduction}
-\clearpage
-%\input{}
+
 \clearpage
 
 % OR USES CHAPTER AND ADD CONTENTS LINE FOR MANY INPUTS
@@ -58,7 +71,6 @@
 	%\input{conception_bdd}
 
 
-\input{chapters/extra/biblio}
 \clearpage
 
 %Fin du rapport.

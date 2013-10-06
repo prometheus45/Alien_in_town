@@ -1,0 +1,96 @@
+\documentclass[pdftex,12pt,a4paper]{report}
+\usepackage[pdftex] {graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\newcommand{\HRule} {\rule{\linewidth} {0.5mm}}
+\begin{document}
+
+% PREMIERE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+	\begin{center}
+		\textsc{\LARGE Universite d'Orleans }\\[1.5cm]
+		\textsc{\LARGE Android}\\[0.5cm]
+
+		%  Titre
+		\HRule \\[0.4cm]
+		{\huge \bfseries Aliens in town}\\[0.3cm]
+		\HRule \\[1.5cm]
+
+		% Auteurs et responsable
+		\begin{minipage}{0.4\textwidth}
+ 			\begin{flushleft} \large
+  				\emph{Auteurs:}\\
+  				Jimmy \textsc{Vogel}\\
+  				Vincent \textsc{Fauveau}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+ 			\begin{flushright}\large
+ 				\emph{Reponsables:}\\
+ 				Sylvain\textsc{Jubertie}
+ 				Fréderic\textsc{Dabroski}
+ 			\end{flushright}
+		\end{minipage}
+		\vfill
+		{\large \today}
+	\end{center}
+\end{titlepage}
+% PREMIERE PAGE FIN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Presentation du projet}
+
+\paragraph{}
+Voici une présentation d'un projet que je souhaite réaliser avec mon groupe - composé de Vincent FAUVEAU et de moi-même pour le moment - dans le cadre du module de  Développement Nomade.
+
+\subsection{Presentation du jeu}
+\paragraph{}
+\textnormal{Le projet s'intitule Alien in town (le nom pouvant changer par la suite).}
+\textnormal{Il consiste à reproduire le principe de jeux actuellement existant dans le marcher sur Android. }
+
+\textnormal{Le principe du jeu est emprunté aux deux jeux suivant :}
+\begin{itemize}
+\item  Mafia : un mod de jeu présent sur Starcraft 2 et présent sur PC.
+\item Loup-garou de Thiercelieux : un jeu de rôle.
+\end{itemize}
+
+\textnormal{
+Ces jeux consiste en un village avec des habitants représentés par des joueurs. Ces joueurs appartiennent à deux factions différentes : les villageois d'un côté et les mafieux ou loup-garous selon le jeu de l'autre. Pour le développement de l'application nous remplacerons les loup-garous et mafieux par des aliens. Les règles peuvent varier selon les versions de ces jeux. 
+Le but du jeu consistant à supprimer l'équipe adverse.}
+
+\textnormal{
+Pour la réalisation de ce but, chaque joueurs possèdent un rôle défini et appartiennent à un camp ou à l'autre. Le rôle d'un joueur est caché à tous les autres joueurs donnant ainsi un environnement de soupçon et d'insécurité. Seule les aliens peuvent savoir qui est dans leur camp. Ensuite le jeu consiste en une succession de journée et de nuit défini comme des tours de jeux. }
+\begin{description}
+\item \textnormal{La journée, tous les joueurs ont la possibilité de parler entre eux via un chat général. Après discution, tous les joueurs votent pour choisir un coupable à juger, puis selon sa plaidoirie(il peut plaider sa cause) choissisent de l'exécuter ou de l'épargner.}
+\item \textnormal{La nuit, chaque villageois ayant un rôle permettant des actions  peuvent l'exécuter. Les aliens quand à eux choisissent d’exécuter un joueur ou non et possèdent la possibilité de communiquer entre eux via un chat privé.}
+\end{description}
+\textnormal{ D'autres règles peuvent être ajoutés rendant le jeu très évolutif.}
+
+\clearpage
+
+\subsection{Presentation technique}
+\paragraph{}
+\textnormal{Les tours et chats du jeux seront gérée par un serveur. Deux types de serveurs seront produit :}
+\begin{description}
+\item \textnormal{ Serveur android : un serveur local sera disponible sur chaque appareil Android afin de donner la possibilité à une partie local. Le nombre de joueurs sur ce type de serveur sera limité.}
+\item \textnormal{ Serveur PC : un serveur sur un PC qui pourra accueillir plusieurs parties en parallèles et permettant à une vingtaine de joueur à jouer ensemble. }
+\end{description}
+
+\textnormal{
+ Une application sera créé sur android compatible 4.0 et plus (présence du wifi direct requis).
+ Cette application devra faire appel aux possibilités d'Android suivantes:}
+ 
+ \begin{itemize}
+\item \textnormal{gestion des ressources android et de l'internationalisation.}
+\item \textnormal{gestion d'une interface graphique android (outil technique encore à décider).}
+\item \textnormal{gestion sonore.}
+\item \textnormal{enregistrement des preferences de l'utilisateur.}
+\item \textnormal{L'interface du jeu devra être différente pour smartphone et tablette.(Fragments utilisés).}
+\end{itemize}
+
+ \textnormal{L'application permettra aussi:}
+\begin{itemize}
+\item \textnormal{La gestion d'un chat interactif.}
+\item \textnormal{La gestion d'un classement et une dimension sociale (amis...etc).}
+\end{itemize}
+
+\end{document}

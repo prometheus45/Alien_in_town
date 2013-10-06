@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.27)  1 OCT 2013 09:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.27)  1 OCT 2013 09:09
 entering extended mode
  %&-line parsing enabled.
-**rapport.tex
-(./rapport.tex
+**presentation_projet.tex
+(./presentation_projet.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
@@ -275,8 +275,8 @@ Now handling font encoding U ...
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-) (./rapport.aux)
-\openout1 = `rapport.aux'.
+) (./presentation_projet.aux)
+\openout1 = `presentation_projet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -290,8 +290,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen105
@@ -312,63 +311,39 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 26.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc)
-\tf@toc=\write3
-\openout3 = `rapport.toc'.
-
-
-(./chapters/introduction.tex [1
-
-]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 11.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
- [2
-
-]) [3]
-(./chapters/extra/biblio.tex
-Overfull \hbox (180.43945pt too wide) in paragraph at lines 9--10
-[]\OT1/cmr/m/n/12 Utiliser des com-man-des linux ^^Ra par-tir de java. Run-time
- class: http://stackoverflow.com/questions/792024/how-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+ [1]
+Overfull \hbox (36.05948pt too wide) in paragraph at lines 87--88
+[]\OT1/cmr/m/n/12 L'interface du jeu de-vra ^etre diff^^Serente pour smart-phon
+e et tablette.(Fragments
  []
 
+[2
 
-Overfull \hbox (92.65471pt too wide) in paragraph at lines 12--13
-[]\OT1/cmr/m/n/12 Ipv4 contr^ole : http://www.developpez.net/forums/showpost.ph
-p?p=1102458&postcount=33 
- []
-
-
-Overfull \hbox (52.59402pt too wide) in paragraph at lines 19--20
-[]\OT1/cmr/m/n/12 Glissement du doigt pour tourner les pages : http://forum.fra
-ndroid.com/topic/58981-
- []
-
-) [4
-
-
-
-] (./rapport.aux) ) 
+] (./presentation_projet.aux) ) 
 Here is how much of TeX's memory you used:
- 1246 strings out of 493848
- 14752 string characters out of 1152823
- 66487 words of memory out of 3000000
+ 1235 strings out of 493848
+ 14686 string characters out of 1152823
+ 67487 words of memory out of 3000000
  4537 multiletter control sequences out of 15000+50000
  9750 words of font info for 34 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 25i,4n,21p,227b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on rapport.pdf (5 pages, 71577 bytes).
+ 25i,4n,21p,435b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+csc10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on presentation_projet.pdf (3 pages, 65662 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

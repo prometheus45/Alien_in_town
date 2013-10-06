@@ -44,9 +44,6 @@
 
 % USE INPUTS 
 
-\input{chapters/introduction}
-\clearpage
-%\input{}
 \clearpage
 
 % OR USES CHAPTER AND ADD CONTENTS LINE FOR MANY INPUTS
@@ -58,7 +55,6 @@
 	%\input{conception_bdd}
 
 
-\input{chapters/extra/biblio}
 \clearpage
 
 %Fin du rapport.
