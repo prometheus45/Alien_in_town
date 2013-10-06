@@ -3,6 +3,7 @@
 	<name>Server</name>
 	<comment></comment>
 	<projects>
+		<project>Alien_in_town_modeles</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

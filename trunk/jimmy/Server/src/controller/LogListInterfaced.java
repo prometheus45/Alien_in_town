@@ -2,10 +2,9 @@ package controller;
 
 import java.util.ArrayList;
 
-import model.Ipv4;
-import model.Log.LogType;
 import model.Log;
 import model.LogList;
+import model.exceptions.LogCreationException;
 
 /**
  * 
@@ -39,32 +38,22 @@ public class LogListInterfaced extends LogList {
 	 * is done.
 	 */
 	@Override
-	synchronized public boolean add(String message, Log.LogType type) {
-		if (type != LogType.MESSAGE)
+	synchronized public boolean add(String message) {
+		Log l;
+		try {
+			l = new Log(message);
+		} catch (LogCreationException e) {
 			return false;
-
-		Log l = new Log(message, type);
-
-		listener.logAdd(l);
-
-		return listes.add(l);
-	}
-
-	/**
-	 * The same method from his parent but he notifies his controller when a log
-	 * is done.
-	 */
-	@Override
-	synchronized public boolean add(Ipv4 ip_server, String classe,
-			String fonction, String message, LogType type) {
-		if (type == LogType.SUCCESS || type == LogType.ERREUR) {
-			Log l = new Log(ip_server, classe, fonction, message, type);
-			listener.logAdd(l);
-			return listes.add(l);
 		}
-
-		return false;
-	}
+		
+		boolean b = listes.add(l);
+		if(b)
+			listener.logAdd(l);
+		else
+			return false;
+		
+		return true;
+	}	
 
 	/**
 	 * 

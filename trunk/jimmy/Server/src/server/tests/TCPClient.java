@@ -4,14 +4,17 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
+import model.Avatar.Condition;
 import model.Ipv4;
-import model.Message;
+import model.MessageCG;
+import model.MessageCS;
 
-public class TCPClient extends Thread{
+public class TCPClient extends Thread {
 
 	private String serverMessage;
 	private Ipv4 ip_client;
 	public static final Ipv4 SERVERIP = new Ipv4("192.168.43.102");
+	private int port;
 	private OnMessageReceived mMessageListener = null;
 	private boolean mRun = false;
 	private int number;
@@ -35,30 +38,28 @@ public class TCPClient extends Thread{
 	 */
 	public void sendMessage(String user_name, String avatar_name, String message) {
 		if (ip_client != null) {
-			message = Message.createMessage(ip_client, user_name, avatar_name,
-					Message.CHAT_MESSAGE, message);
+			message = MessageCG.chat(ip_client, port, user_name, avatar_name,
+					Condition.DEAD, avatar_name, message);
 			if (out != null && !out.checkError()) {
-				System.out.println(ip_client + "ici");
 				out.println(message);
 				out.flush();
-				if(out.checkError())
+				if (out.checkError())
 					System.out.println("erreur");
 			}
 		}
 	}
-	
-	public void sendDisconnect(String user_name, String avatar_name){
+
+	public void sendDisconnect(String user_name, String avatar_name) {
 		if (ip_client != null) {
-			String message = Message.createMessage(ip_client, user_name, avatar_name,
-					Message.CONTROL_MESSAGE, Message.CONTROL_MESSAGE_DISCONNECT);
+			String message = MessageCS.disconnect(ip_client, port, user_name,
+					avatar_name, Condition.DEAD, avatar_name);
 			if (out != null && !out.checkError()) {
 				out.println(message);
-				System.out.println(ip_client + "ici");
 				out.flush();
-				if(out.checkError())
+				if (out.checkError())
 					System.out.println("erreur");
 			}
-		}		
+		}
 	}
 
 	public void stopClient() {
@@ -71,20 +72,22 @@ public class TCPClient extends Thread{
 			InetAddress serverAddr = InetAddress.getByName(SERVERIP.toString());
 			Socket socket = new Socket(serverAddr, 4444);
 			ip_client = new Ipv4(socket.getLocalAddress());
+			port = socket.getLocalPort();
 			try {
 				out = new PrintWriter(new BufferedWriter(
 						new OutputStreamWriter(socket.getOutputStream())), true);
 				in = new BufferedReader(new InputStreamReader(
 						socket.getInputStream()));
 				while (mRun) {
-					this.sendMessage("user_name"+number, "avatar_name"+number, "a");
+					this.sendMessage("user_name" + number, "avatar_name"
+							+ number, "a");
 					serverMessage = in.readLine();
 					if (serverMessage != null && mMessageListener != null)
 						mMessageListener.messageReceived(serverMessage);
 					serverMessage = null;
-					Thread.sleep(2*1000);
+					Thread.sleep(2 * 1000);
 				}
-				
+
 			} catch (Exception e) {
 			} finally {
 				socket.close();

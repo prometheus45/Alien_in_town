@@ -4,10 +4,15 @@ import graphic.ServerInterface;
 
 import javax.swing.JFrame;
 
-import server.ServerChat;
+import server.Server;
+import main.Main;
 import model.Log;
-import model.Log.LogType;
 import model.Message;
+import model.MessageCG;
+import model.MessageCS;
+import model.MessageSG;
+import model.MessageSS;
+import model.MessageSS.LogType;
 
 /**
  * 
@@ -17,7 +22,7 @@ import model.Message;
  *         LogList is transform in a LogListInterfaced.
  * 
  */
-public class ServerChatControlInterface extends ServerChat {
+public class ServerChatControlInterface extends Server {
 
 	/**
 	 * Constructor
@@ -25,7 +30,7 @@ public class ServerChatControlInterface extends ServerChat {
 	 * @param port
 	 *            The port uses by the server.
 	 */
-	public ServerChatControlInterface(int port) {
+	public ServerChatControlInterface(final int port) {
 		super(port);
 
 		// We construct the Swing interface.
@@ -34,9 +39,8 @@ public class ServerChatControlInterface extends ServerChat {
 
 					@Override
 					public void messageAdd(String message) {
-						message = Message.createMessage(SERVERIP, "server",
-								"server", Message.CHAT_MESSAGE, message);
-						printer.sendAll(message);
+						message = MessageSG.chat(Main.SERVERIP, port, message);
+						manager.sendAll(message);
 					}
 
 				});
@@ -47,26 +51,48 @@ public class ServerChatControlInterface extends ServerChat {
 
 					@Override
 					public void logAdd(Log log) {
-						if (log.getType() == LogType.ERREUR)
-							frame.add_message(log.getIp().toString(),
-									log.getDetail1(), log.getDetail2(),
-									log.getMessage(), frame.STYLE_ERREUR_SIMPLE);
-						else if (log.getType() == LogType.SUCCESS)
-							frame.add_message(log.getIp().toString(),
-									log.getDetail1(), log.getDetail2(),
-									log.getMessage(),
-									frame.STYLE_SUCCESS_SIMPLE);
-						else if (log.getDetail3().equals(Message.CHAT_MESSAGE))
-							frame.add_message(log.getIp().toString(),
-									log.getDetail1(), log.getDetail2(),
-									log.getMessage(),
-									frame.STYLE_MESSAGE_SIMPLE);
-						else if (log.getDetail3().equals(
-								Message.CONTROL_MESSAGE))
-							frame.add_message(log.getIp().toString(),
-									log.getDetail1(), log.getDetail2(),
-									log.getMessage(),
+						String t = log.getType();
+						String message = log.getMessage();
+						String ip = log.getIp().toString();
+						if (t.equals(MessageCG.CG_CHAT_NAME)) {
+							String player = Message.getParam(message,
+									MessageCG.CG_CHAT_PLAYER_NAME);
+							String avatar = Message.getParam(message,
+									MessageCG.CG_CHAT_AVATAR_NAME);
+							String mess = Message.getParam(message,
+									MessageCG.CG_CHAT_MESSAGE);
+							frame.add_message(Main.SERVERIP.toString(), player,
+									avatar, mess, frame.STYLE_MESSAGE_SIMPLE);
+						}
+						if (t.equals(MessageCS.CS_DISCONNECT_NAME)) {
+							String player = Message.getParam(message,
+									MessageCS.CS_DISCONNECT_PLAYER_NAME);
+							String avatar = Message.getParam(message,
+									MessageCS.CS_DISCONNECT_AVATAR_NAME);
+							String mess = "Disconnect";
+							frame.add_message(ip, player, avatar, mess,
 									frame.STYLE_MESS_SPE_SIMPLE);
+						}
+						if (log.getType().equals(MessageSS.SS_LOG_NAME)) {
+							String classe = Message.getParam(message,
+									MessageSS.SS_LOG_CLASSE);
+							String fonction = Message.getParam(message,
+									MessageSS.SS_LOG_FONCTION);
+							String mess = Message.getParam(message,
+									MessageSS.SS_LOG_MESSAGE);
+							String type = Message.getParam(message,
+									MessageSS.SS_LOG_TYPE);
+							if (type.equals(LogType.ERROR.toString())) {
+								frame.add_message(Main.SERVERIP.toString(),
+										classe, fonction, mess,
+										frame.STYLE_ERREUR_SIMPLE);
+							}
+							if (type.equals(LogType.SUCCESS.toString())) {
+								frame.add_message(Main.SERVERIP.toString(),
+										classe, fonction, mess,
+										frame.STYLE_SUCCESS_SIMPLE);
+							}
+						}
 					}
 
 				});
@@ -76,5 +102,4 @@ public class ServerChatControlInterface extends ServerChat {
 		frame.pack();
 		frame.setVisible(true);
 	}
-
 }

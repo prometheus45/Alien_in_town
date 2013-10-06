@@ -1,10 +1,10 @@
 package com.ludosimp.aliens_in_town.activities;
 
-import com.example.aliens_in_town.R;
-
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+
+import com.example.aliens_in_town.R;
 
 public class MainActivity extends Activity {
 
