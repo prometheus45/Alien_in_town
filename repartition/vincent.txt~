@@ -1,0 +1,4 @@
+Android :
+	- un fragment liste des morts à partir d'une arraylist de string.
+	- un fragment chat à partir de la classe deja existante.
+	- la possibilite de passer de l'un à l'autre par gauche droite.
