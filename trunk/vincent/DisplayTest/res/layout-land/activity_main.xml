@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <fragment 
+        android:name="com.example.displaytest.DeadListFragment"
+        android:id="@+id/deadView"
+        android:layout_height="match_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        />
+     <fragment 
+        android:name="com.example.displaytest.ChatFragment"
+        android:id="@+id/chatView"
+        android:layout_height="match_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        />
+      <fragment 
+        android:name="com.example.displaytest.AliveListFragment"
+        android:id="@+id/aliveView"
+        android:layout_height="match_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
