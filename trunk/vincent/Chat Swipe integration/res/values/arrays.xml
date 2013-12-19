@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="names_players_list">
+
+        <!-- En A -->
+        <item>Anormal guy</item>
+        <item>Average guy</item>
+        <item>Armageddon</item>
+        <item>Almost smart</item>
+        <item>America forever</item>
+        <item>Animal</item>
+        <item>Apple lover</item>
+        <item>Australia forever</item>
+        <item>Adele Adkins</item>
+
+        <!-- EN B -->
+        <item>Baby justin</item>
+        <item>Blue star</item>
+        <item>Bachelor</item>
+        <item>Bacon and shrimp</item>
+        <item>Banker so kill me</item>
+        <item>Beauty</item>
+        <item>Betrayal habit</item>
+        <item>Benjamin Castaldi</item>
+        <item>Boxing is a must</item>
+
+        <!-- EN C -->
+        <item>Canada forever</item>
+        <item>Chairman so listen</item>
+        <item>China forever or not</item>
+        <item>Climatologist</item>
+        <item>Clues is a must</item>
+        <item>Conspirator</item>
+        <item>Contributor to the kill</item>
+        <item>Cooperator if i want</item>
+        <item>Cornelius Nyungura or Corneille</item>
+
+        <!-- EN D -->
+        <item>Denmark forever</item>
+        <item>Dealer so call me</item>
+        <item>Dexterity is useless here</item>
+        <item>Difficult guy</item>
+        <item>Dwarf</item>
+        <item>Dolphin lover</item>
+        <item>Discipline is everything</item>
+        <item>Dieudonné M bala M bala</item>
+        <item>Daniel Michael Blake Day-Lewise</item>
+
+        <!-- EN E -->
+        <item>Egyptian in town</item>
+        <item>Elephant lover</item>
+        <item>Enthusiasm guy</item>
+        <item>Ethiopia forever</item>
+        <item>Exchange with me</item>
+        <item>Executive so kill me</item>
+        <item>Espionage pro</item>
+        <item>Europe will make it</item>
+        <item>Eminem in town</item>
+
+        <!-- EN F -->
+        <item>Farmer</item>
+        <item>Felony is my name</item>
+        <item>Fencing lover</item>
+        <item>Fisherman in week-end</item>
+        <item>Football adept</item>
+        <item>Foresight ability care</item>
+        <item>France forever</item>
+        <item>Funeral held soon</item>
+        <item>Fantasy reader</item>
+
+        <!-- EN G -->
+        <item>Gangster</item>
+        <item>Geek and what</item>
+        <item>Germany forever</item>
+        <item>Girlfriend you dream of</item>
+        <item>Gambling addict</item>
+        <item>Geometry professor</item>
+        <item>God father from the mafia</item>
+        <item>Gaga stephani</item>
+        <item>Garou</item>
+
+        <!-- EN H -->
+        <item>Human or not</item>
+        <item>Hairdresser</item>
+        <item>Hunter waiting to kill</item>
+        <item>Horse-riding lover</item>
+        <item>Honorable guy</item>
+        <item>High school student</item>
+        <item>Hammering everyone</item>
+        <item>Hallyday Johnny</item>
+        <item>Doctor save me</item>
+
+        <!-- EN I -->
+        <item>Idiot of the town</item>
+        <item>Idealist peace-maker</item>
+        <item>Idol in game</item>
+        <item>Immunity for me</item>
+        <item>Ironic guy</item>
+        <item>Insect lover</item>
+        <item>Information is a must</item>
+        <item>Immortal guy</item>
+        <item>Indochine singer</item>
+
+        <!-- EN J -->
+        <item>Japan forever</item>
+        <item>Jovial person</item>
+        <item>Justice seeker</item>
+        <item>Jealous girlfriend</item>
+        <item>Jeweller</item>
+        <item>Journalist cover me</item>
+        <item>January is coming</item>
+        <item>Jordan i love you</item>
+        <item>Jesse Eisenber the survivor</item>
+
+        <!-- EN K -->
+        <item>Korea forever</item>
+        <item>Killer in cover</item>
+        <item>King in is kingdom</item>
+        <item>Kitten keeper</item>
+        <item>Kiss me or die</item>
+        <item>Keyboard where are you</item>
+        <item>Kleptomaniac</item>
+        <item>Kilo go away go</item>
+        <item>Kaka go Milan forever</item>
+
+        <!-- EN L -->
+        <item>Lantern jax in game</item>
+        <item>Lawyer so care</item>
+        <item>Lemonade is so good</item>
+        <item>Leopard lover</item>
+        <item>Levelling so easy</item>
+        <item>Lizard hater</item>
+        <item>Loyalty to the team</item>
+        <item>Lion lover</item>
+        <item>Lagaf</item>
+
+        <!-- EN M -->
+        <item>Martyr as always</item>
+        <item>Maths professor</item>
+        <item>Merry christmas guys</item>
+        <item>Misfit lover</item>
+        <item>Monkey lover</item>
+        <item>Monarch in town</item>
+        <item>Moral person</item>
+        <item>Mimi mouse</item>
+        <item>Murderer in cover</item>
+
+        <!-- EN N -->
+        <item>Nabilla non mais allo</item>
+        <item>Negociator</item>
+        <item>Night-club lover</item>
+        <item>Nightmare it is me</item>
+        <item>Novice in game</item>
+        <item>Nonsense person</item>
+        <item>Nymphomaniac</item>
+        <item>Never say never</item>
+        <item>Normal guy</item>
+
+        <!-- EN O -->
+        <item>Oath to the team</item>
+        <item>Observer</item>
+        <item>Old man</item>
+        <item>Online games forever</item>
+        <item>Opportunist person</item>
+        <item>Oceanographist</item>
+        <item>On duty</item>
+        <item>Optimistic person</item>
+        <item>Orelsan in town</item>
+
+        <!-- EN P -->
+        <item>Panties lover</item>
+        <item>Paradox is a paradox</item>
+        <item>Patriot</item>
+        <item>Peer to peer system</item>
+        <item>Perspicacity is a must</item>
+        <item>Pharmacist</item>
+        <item>Pianist</item>
+        <item>Pillow lover</item>
+        <item>Pitbull just for you</item>
+
+        <!-- EN Q -->
+        <item>Quantity over quality</item>
+        <item>Question yourself</item>
+        <item>Queen of the game</item>
+        <item>Queen is in town</item>
+        <item>Quality over quantity</item>
+        <item>Quarrel maker</item>
+        <item>QSDFGHJKLM</item>
+        <item>Quartz collector</item>
+        <item>Quentin</item>
+
+        <!-- EN R -->
+        <item>Rabbit lover</item>
+        <item>Refrigerator is too far</item>
+        <item>Resident of New york</item>
+        <item>Retailer</item>
+        <item>Revenge seeker</item>
+        <item>Rhapsody listener</item>
+        <item>Ruby m.... Ruby m....</item>
+        <item>Rage guy</item>
+        <item>Rihanna sing for you</item>
+
+        <!-- EN S -->
+        <item>Saturn is beautiful</item>
+        <item>Saturday night</item>
+        <item>Singer in pause</item>
+        <item>School lover</item>
+        <item>Shark hunter</item>
+        <item>Sister-in-law</item>
+        <item>Sleeping actually</item>
+        <item>Software never end</item>
+        <item>Shakira move for you</item>
+
+        <!-- EN T -->
+        <item>Today is the day</item>
+        <item>Taiwan forever</item>
+        <item>Teacher</item>
+        <item>Tennis lover</item>
+        <item>Thief in cover</item>
+        <item>Thursday just one more</item>
+        <item>Trader</item>
+        <item>Transformers hell yeah</item>
+
+        <!-- EN U -->
+        <item>Utimate player</item>
+        <item>Unemployed person</item>
+        <item>Unconscious player</item>
+        <item>United States forever</item>
+        <item>University student</item>
+        <item>University teacher</item>
+        <item>User for the first time</item>
+        <item>Utopiste</item>
+        <item>Ugly guy</item>
+
+        <!-- EN V -->
+        <item>Vengeance will follow</item>
+        <item>Verdict guilty</item>
+        <item>Veteran player </item>
+        <item>Vigil on duty</item>
+        <item>Violence prohibited plz</item>
+        <item>Visitor testing</item>
+        <item>Valuable player</item>
+        <item>Virtuosity in person</item>
+        <item>Volunteer to kill</item>
+
+        <!-- EN W -->
+        <item>Weapon in human form</item>
+        <item>Wine adept</item>
+        <item>Witch</item>
+        <item>Winner all the time</item>
+        <item>Winner or hope so</item>
+        <item>Warrior</item>
+        <item>Whiskey is a must</item>
+        <item>Women in crazy state</item>
+        <item>Wolf lover</item>
+
+        <!-- EN X -->
+        <item>Xenotime collector</item>
+        <item>Xanthamides searcher</item>
+        <item>Xylophonist</item>
+        <item>Xerography user</item>
+        <item>Xylophone adept</item>
+        <item>Xenogenetic suspicious person</item>
+        <item>Xenocryst collector</item>
+        <item>Xebec conductor</item>
+        <item>Xylopyrographist</item>
+
+        <!-- EN Y -->
+        <item>Young girl</item>
+        <item>Yacht conductor</item>
+        <item>Youngster</item>
+        <item>Yolk lover</item>
+        <item>Yaourt lover</item>
+        <item>Yarn seller</item>
+        <item>Yes i am an idiot</item>
+        <item>Youngster in dangerous state</item>
+        <item>Young crazy girl</item>
+
+        <!-- EN Z -->
+        <item>Zoologist</item>
+        <item>Zero time losing</item>
+        <item>Zoo adept</item>
+        <item>Zachary Quinto</item>
+        
+    </array>
+
+</resources>
