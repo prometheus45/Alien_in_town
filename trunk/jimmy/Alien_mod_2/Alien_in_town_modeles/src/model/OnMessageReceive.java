@@ -9,6 +9,8 @@ public interface OnMessageReceive {
 	public void onCGMinPlayerReceive();
 	public void onCGStartGameReceive();
 	public void onCGNewGameReceive();
+	public void onCGNewVoteReceive();
+	public void onCGRemoveVoteReceive();
 	
 	//CS messages
 	public void onCSConnectReceive();

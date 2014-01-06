@@ -79,6 +79,14 @@ public class MessageCGTest extends TestCase {
 		assertNull(Message.getParam(message, MessageCG.CG_NEW_GAME_TYPE+1));
 	}
 	
+	public void testNew_vote() {
+		assertNotNull(MessageCG.new_vote(new Ipv4("0.0.0.0"), 1,0, "Jean Charles Henry", "Raymond"));
+		assertNull(MessageCG.new_vote(new Ipv4("0.0.0.0"), 1, 0,null,null));
+	}
 	
+	public void testRemove_vote() {
+		assertNotNull(MessageCG.remove_vote(new Ipv4("0.0.0.0"), 1,0, "Jean Charles Henry", "Raymond"));
+		assertNull(MessageCG.remove_vote(new Ipv4("0.0.0.0"), 1, 0,null,null));
+	}
 
 }

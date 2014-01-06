@@ -443,4 +443,16 @@ protected String message;
 		
 	}
 
+	@Override
+	public void onCGNewVoteReceive() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onCGRemoveVoteReceive() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

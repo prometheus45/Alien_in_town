@@ -117,5 +117,41 @@ public class MessageCG {
 		
 		return elem_father;
 	}
+
+	// The NewVote format for a client.
+	public static final String CG_NEW_VOTE_NAME = "cg_new_vote";
+	public static final int CG_NEW_VOTE_NUM_PARAMS = 2;
+	public static final int CG_VOTER_NAME = 1;
+	public static final int CG_TARGET_NAME = 2;
+	
+	public static String new_vote(Ipv4 ip, Integer port, Integer id_game, String v_name, String t_name){
+		if (!ParamCheck.notNull(new Object[]{ip, port, v_name, t_name}))
+			return null;
+		
+		String SEPA = Message.new_separator();
+		String elem_son = Message.concat(SEPA, new String[] {v_name, t_name});
+		String elem_father = Message.createMessage(ip, port, id_game, 
+				CG_NEW_VOTE_NAME, elem_son);
+		
+		return elem_father;
+	}
+
+	// The RemoveVote format for a client.
+	public static final String CG_REMOVE_VOTE_NAME = "cg_remove_vote";
+	public static final int CG_REMOVE_VOTE_NUM_PARAMS = 2;
+	public static final int CG_REMOVE_VOTER_NAME = 1;
+	public static final int CG_REMOVE_TARGET_NAME = 2;
+	
+	public static String remove_vote(Ipv4 ip, Integer port, Integer id_game, String v_name, String t_name){
+		if (!ParamCheck.notNull(new Object[]{ip, port, v_name, t_name}))
+			return null;
+		
+		String SEPA = Message.new_separator();
+		String elem_son = Message.concat(SEPA, new String[] {v_name, t_name});
+		String elem_father = Message.createMessage(ip, port, id_game, 
+				CG_NEW_VOTE_NAME, elem_son);
+		
+		return elem_father;
+	}
 	
 }

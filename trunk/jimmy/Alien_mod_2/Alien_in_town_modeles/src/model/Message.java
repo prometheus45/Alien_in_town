@@ -253,6 +253,10 @@ public class Message {
 			return MessageSG.SG_ADD_AVATAR_NUM_PARAMS;
 		if(type.equals(MessageSG.SG_REMOVE_AVATAR_NAME))
 			return MessageSG.SG_REMOVE_AVATAR_NUM_PARAMS;
+		if(type.equals(MessageCG.CG_NEW_VOTE_NAME))
+			return MessageCG.CG_NEW_VOTE_NUM_PARAMS;
+		if(type.equals(MessageCG.CG_REMOVE_VOTE_NAME))
+			return MessageCG.CG_REMOVE_VOTE_NUM_PARAMS;
 		return 0;
 	}
 	
