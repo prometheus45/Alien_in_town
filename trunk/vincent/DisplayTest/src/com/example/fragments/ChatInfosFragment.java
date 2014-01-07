@@ -1,8 +1,6 @@
-package com.example.main;
+package com.example.fragments;
 
 import com.example.displaytest.R;
-import com.example.fragments_simples.ChatFragment;
-import com.example.fragments_simples.InformationsFragment;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

@@ -1,6 +1,6 @@
 package com.example.horizontal;
 
-import com.example.main.ChatInfosFragment;
+import com.example.fragments.ChatInfosFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

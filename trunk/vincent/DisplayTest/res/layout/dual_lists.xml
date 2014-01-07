@@ -5,14 +5,14 @@
     android:orientation="horizontal" >
     
 	 <fragment 
-        android:name="com.example.fragments_simples.DeadListFragment"
+        android:name="com.example.fragments.DeadListFragment"
         android:id="@+id/deadView"
         android:layout_height="match_parent"
         android:layout_width="0dip"
         android:layout_weight="1"
         />
       <fragment 
-        android:name="com.example.fragments_simples.AliveListFragment"
+        android:name="com.example.fragments.AliveListFragment"
         android:id="@+id/aliveView"
         android:layout_height="match_parent"
         android:layout_width="0dip"

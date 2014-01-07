@@ -1,4 +1,4 @@
-package com.example.fragments_simples;
+package com.example.fragments;
 
 import com.example.displaytest.R;
 

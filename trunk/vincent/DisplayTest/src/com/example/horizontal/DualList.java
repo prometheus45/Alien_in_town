@@ -1,8 +1,8 @@
 package com.example.horizontal;
 
 import com.example.displaytest.R;
-import com.example.fragments_simples.AliveListFragment;
-import com.example.fragments_simples.DeadListFragment;
+import com.example.fragments.AliveListFragment;
+import com.example.fragments.DeadListFragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

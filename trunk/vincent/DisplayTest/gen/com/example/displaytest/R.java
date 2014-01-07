@@ -40,8 +40,8 @@ public final class R {
         public static final int infosView=0x7f090003;
         public static final int infosViewVert=0x7f090005;
         public static final int list=0x7f090007;
-        public static final int pager=0x7f090001;
-        public static final int pagerLand=0x7f090000;
+        public static final int pager=0x7f090000;
+        public static final int pagerLand=0x7f090001;
         public static final int secondLine=0x7f09000e;
         public static final int send_button=0x7f09000a;
         public static final int text=0x7f090002;

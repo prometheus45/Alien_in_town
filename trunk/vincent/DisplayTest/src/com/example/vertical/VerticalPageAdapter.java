@@ -1,8 +1,8 @@
 package com.example.vertical;
 
-import com.example.fragments_simples.AliveListFragment;
-import com.example.fragments_simples.DeadListFragment;
-import com.example.main.ChatInfosFragment;
+import com.example.fragments.AliveListFragment;
+import com.example.fragments.ChatInfosFragment;
+import com.example.fragments.DeadListFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
