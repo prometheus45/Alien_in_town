@@ -1,7 +1,5 @@
 package com.example.fragments;
 
-import model.Game;
-
 import com.example.displaytest.R;
 
 import android.os.Bundle;
@@ -16,24 +14,19 @@ public class DualList extends Fragment {
 	private DeadListFragment dl;
 	private AliveListFragment al;
 	
-	public static DualList newInstance(Game g){
+	public static DualList newInstance(Bundle b){
 		DualList dl = new DualList();
 		
-		//Passage dans un bundle
-		Bundle args = new Bundle();
-		args.putSerializable("game", g);
-		
-		dl.setArguments(args);
+		dl.setArguments(b);
 		
 		return dl;
 	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		dl = DeadListFragment.newInstance((Game)getArguments().getSerializable("game"));
-		al = AliveListFragment.newInstance((Game)getArguments().getSerializable("game"));
+		dl = DeadListFragment.newInstance(getArguments());
+		al = AliveListFragment.newInstance(getArguments());
 	}
 
 	@Override
@@ -54,6 +47,14 @@ public class DualList extends Fragment {
 
 	public AliveListFragment getAliveList() {
 		return al;
+	}
+
+	public void setDeadList(DeadListFragment dl) {
+		this.dl = dl;
+	}
+
+	public void setAliveList(AliveListFragment al) {
+		this.al = al;
 	}
 	
 	

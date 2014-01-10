@@ -1,7 +1,5 @@
 package com.example.fragments;
 
-import model.Game;
-
 import com.example.displaytest.R;
 
 import android.content.res.Configuration;
@@ -19,26 +17,23 @@ public class ChatInfosFragment extends Fragment {
 	private ChatFragment chatfragment;
 	private InformationsFragment infosfragment;
 
-	public static ChatInfosFragment newInstance(Game g) {
+	public static ChatInfosFragment newInstance(Bundle b) {
 		ChatInfosFragment cif = new ChatInfosFragment();
 		
-		Bundle args = new Bundle();
-		args.putSerializable("game", g);
-		cif.setArguments(args);
+		cif.setArguments(b);
 		
 		return cif;
 	}
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (getArguments() != null){
-			Game g = (Game) getArguments().getSerializable("game");
-			infosfragment = InformationsFragment.newInstance(g);
-			chatfragment = ChatFragment.newInstance(g);
+			infosfragment = InformationsFragment.newInstance(getArguments());
+			chatfragment = ChatFragment.newInstance(getArguments());
 		}else{
 			Log.e("<<<<<<CHATINFOS>>>>>>", "BUNDLE NULL");
 		}
-		chatfragment = new ChatFragment();
 	}
 
 	@Override
@@ -64,4 +59,12 @@ public class ChatInfosFragment extends Fragment {
 		return infosfragment;
 	}
 
+	public void setChatfragment(ChatFragment chatfragment) {
+		this.chatfragment = chatfragment;
+	}
+
+	public void setInfosfragment(InformationsFragment infosfragment) {
+		this.infosfragment = infosfragment;
+	}
+	
 }

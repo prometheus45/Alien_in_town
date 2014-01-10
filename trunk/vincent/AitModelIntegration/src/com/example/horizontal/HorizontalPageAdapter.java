@@ -1,7 +1,5 @@
 package com.example.horizontal;
 
-import model.Game;
-
 import com.example.fragments.AliveListFragment;
 import com.example.fragments.ChatFragment;
 import com.example.fragments.ChatInfosFragment;
@@ -10,6 +8,7 @@ import com.example.fragments.DualList;
 import com.example.fragments.InformationsFragment;
 import com.example.main.UniPageAdapter;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
@@ -17,11 +16,13 @@ public class HorizontalPageAdapter extends UniPageAdapter {
 	
 	private ChatInfosFragment ci;
 	private DualList dl;
+	private Bundle b;
 
-	public HorizontalPageAdapter(FragmentManager fm, Game g){
-		super(fm,g);
-		ci = ChatInfosFragment.newInstance(g);
-		dl = DualList.newInstance(g);
+	public HorizontalPageAdapter(FragmentManager fm, Bundle b){
+		super(fm,b);
+		ci = ChatInfosFragment.newInstance(b);
+		dl = DualList.newInstance(b);
+		this.b = b;
 		POS_ALIVE = 1;
 		POS_DEAD = 1;
 		POS_CHAT = 0;
@@ -41,7 +42,6 @@ public class HorizontalPageAdapter extends UniPageAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return 2;
 	}
 
@@ -64,5 +64,15 @@ public class HorizontalPageAdapter extends UniPageAdapter {
 	public ChatFragment getChatFragment() {
 		return ci.getChatfragment();
 	}
+
+	public Bundle getBundle() {
+		return b;
+	}
+
+	public void setBundle(Bundle b) {
+		this.b = b;
+	}
+	
+	
 
 }

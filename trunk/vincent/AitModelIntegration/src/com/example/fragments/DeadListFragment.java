@@ -2,9 +2,6 @@ package com.example.fragments;
 
 import java.util.ArrayList;
 
-import model.Client;
-import model.Game;
-
 import com.example.displaytest.R;
 
 import android.os.Bundle;
@@ -19,14 +16,11 @@ import android.widget.ListView;
 public class DeadListFragment extends ListFragment {
 
 	private ListView listview;
-	Game g;
 	
-	public static DeadListFragment newInstance(Game g) {
+	public static DeadListFragment newInstance(Bundle b) {
         DeadListFragment f = new DeadListFragment();
-
-        Bundle args = new Bundle();
-        args.putSerializable("game", g);
-        f.setArguments(args);
+        
+        f.setArguments(b);
 
         return f;
     }	
@@ -49,21 +43,17 @@ public class DeadListFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		listview = getListView();
 		if (getArguments() != null){
-			g = (Game)getArguments().getSerializable("game");
-			updateView(g);
+			updateView(getArguments());
 		}else{
 			Log.e("<<<<<<DEAD>>>>>>", "BUNDLE NULL");
 		}
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public void updateView(Game g){
-
-		ArrayList<Client> playersDead = g.getDeads();
-		ArrayList<String> playersDeadsName = new ArrayList<String>();
-		for (int i=0; i<playersDead.size();i++){
-			playersDeadsName.add(playersDead.get(i).getAvatar().getName());
+	public void updateView(Bundle b){
+		if (getActivity() != null ){
+			ArrayList<String> playersDeadsName = b.getStringArrayList("pdName");
+			listview.setAdapter(new ArrayAdapter(this.getActivity(),android.R.layout.simple_list_item_1,playersDeadsName));
 		}
-		listview.setAdapter(new ArrayAdapter(this.getActivity(),android.R.layout.simple_list_item_1,playersDeadsName));
 	}
 }

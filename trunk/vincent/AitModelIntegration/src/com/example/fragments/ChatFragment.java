@@ -1,14 +1,11 @@
 package com.example.fragments;
 
-import model.Game;
-
 import com.example.displaytest.R;
 
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,14 +13,11 @@ import android.view.ViewGroup;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class ChatFragment extends Fragment {
 	
-	Game g;
 
-	public static ChatFragment newInstance(Game g){
+	public static ChatFragment newInstance(Bundle b){
 		ChatFragment c = new ChatFragment();
 		
-		Bundle args = new Bundle();
-		args.putSerializable("game", g);
-		c.setArguments(args);
+		c.setArguments(b);
 		
 		return c;
 	}
@@ -31,12 +25,6 @@ public class ChatFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		if (getArguments() != null){
-			g = (Game) getArguments().getSerializable("game");
-		}else{
-			Log.e("<<<<<<CHAT>>>>>>", "BUNDLE NULL");
-		}
 	}
 
 	@Override
@@ -46,7 +34,7 @@ public class ChatFragment extends Fragment {
 		return v;
 	}
 	
-	public void updateView(Game g){
+	public void updateView(Bundle b){
 		
 	}
 }

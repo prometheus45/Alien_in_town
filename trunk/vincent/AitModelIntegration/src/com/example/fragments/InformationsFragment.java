@@ -1,8 +1,5 @@
 package com.example.fragments;
 
-
-import model.Game;
-
 import com.example.displaytest.R;
 
 import android.os.Bundle;
@@ -17,14 +14,11 @@ import android.widget.TextView;
 public class InformationsFragment extends Fragment{
 	
 	TextView textview;
-	Game g;
 
-	public static InformationsFragment newInstance(Game g){
+	public static InformationsFragment newInstance(Bundle b){
 		InformationsFragment i = new InformationsFragment();
-		
-		Bundle args = new Bundle();
-		args.putSerializable("game", g);
-		i.setArguments(args);
+	
+		i.setArguments(b);
 		
 		return i;
 	}
@@ -40,18 +34,16 @@ public class InformationsFragment extends Fragment{
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		textview = (TextView) getView().findViewById(R.id.text);
-		
 		if (getArguments() != null){
-			g = (Game) getArguments().getSerializable("game");
+			updateView(getArguments());
 		}else{
 			Log.e("<<<<<<INFOS>>>>>>", "BUNDLE NULL");
 		}
-		updateView(g);
 	}
 	
-	public void updateView(Game g){
-		textview.setText(g.getTime()+"\n\n\n"+g.getAvatarsNames().get(8)+"\n"+
-				g.getAvatarsTypes().get(8).toString()+"\n"+g.getAvatarsStates().get(8).toString());
+	public void updateView(Bundle b){
+		textview.setText(b.getFloat("gameTime")+"\n\n\n"+b.getString("playerAvatarName")+"\n"+
+				b.getString("playerAvatarType")+"\n"+b.getString("playerAvatarState"));
 	}
 	
 }

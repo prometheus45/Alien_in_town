@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.Writer;
+import java.util.ArrayList;
 
 import model.Avatar;
 import model.Client;
@@ -28,6 +29,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Menu;
 
 public class GameActivity extends FragmentActivity {
@@ -67,6 +69,7 @@ public class GameActivity extends FragmentActivity {
 
 	UniPageAdapter adapter;
 	ViewPager pager;
+	GameThread gt;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,20 +105,43 @@ public class GameActivity extends FragmentActivity {
 		
 		//////////////////////////////////////
 		//CREATION DES FRAGMENTS
-
+		
 		if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-			adapter = new VerticalPageAdapter(getSupportFragmentManager(),g);
+			adapter = new VerticalPageAdapter(getSupportFragmentManager(),gameToBundle());
 			pager = (ViewPager) findViewById(R.id.pager);
 			pager.setAdapter(adapter);
 			pager.setCurrentItem(1);
 		} else {
-			adapter =new HorizontalPageAdapter(getSupportFragmentManager(),g);
+			adapter =new HorizontalPageAdapter(getSupportFragmentManager(),gameToBundle());
 			pager = (ViewPager) findViewById(R.id.pagerLand);
 			pager.setAdapter(adapter);
 		}
 		
-		GameThread gt = new GameThread();
+		gt = new GameThread();
 		gt.execute();
+		
+	}
+	
+	public Bundle gameToBundle(){
+		ArrayList<Client> playersAlive = g.getAlive();
+		ArrayList<String> playersAlivesName = new ArrayList<String>();
+		for (int i=0; i<playersAlive.size();i++){
+			playersAlivesName.add(playersAlive.get(i).getAvatar().getName());
+		}
+		ArrayList<Client> playersDead = g.getDeads();
+		ArrayList<String> playersDeadsName = new ArrayList<String>();
+		for (int i=0; i<playersDead.size();i++){
+			playersDeadsName.add(playersDead.get(i).getAvatar().getName());
+		}
+		Bundle b = new Bundle();
+		b.putStringArrayList("paName", playersAlivesName);
+		b.putStringArrayList("pdName", playersDeadsName);
+		b.putFloat("gameTime", g.getTime());
+		b.putString("playerAvatarName", g.getAvatarsNames().get(5));
+		b.putString("playerAvatarType", g.getAvatarsTypes().get(5).toString());
+		b.putString("playerAvatarState", g.getAvatarsStates().get(5).toString());
+		
+		return b;
 	}
 	
 	@Override
@@ -127,48 +153,58 @@ public class GameActivity extends FragmentActivity {
 
 	@Override
 	protected void onPause() {
+		//gt.setRun(false);
 		super.onPause();
 	}
 
 	@Override
 	protected void onResume() {
+		//gt.setRun(true);
 		super.onResume();
 	}
 	
 	public class GameThread extends AsyncTask<Void, Game, Void> {
 
+		private boolean run = true;
+		
 		@Override
 		protected Void doInBackground(Void... params) {
+			//publishProgress(g);
+			int i=0;
 			while(g.getTime()<900000){
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				if (run){
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					g.setTime(g.getTime()+1);
+					publishProgress(g);
+					Log.d("[]",i+"");
 				}
-				g.setTime(g.getTime()+666);
-				publishProgress(g);
-				//adapter.notifyDataSetChanged();
+				i++;
 			}
 			return null;
 		}
 
 		@Override
 		protected void onPostExecute(Void result) {
-			// TODO Auto-generated method stub
 			super.onPostExecute(result);
 		}
 
 		@Override
 		protected void onPreExecute() {
-			// TODO Auto-generated method stub
 			super.onPreExecute();
 		}
 
 		@Override
 		protected void onProgressUpdate(Game... values) {
 			super.onProgressUpdate(values);
-			adapter.updateViews(g);
+			adapter.updateViews(gameToBundle());
+		}
+		
+		protected void setRun(boolean b){
+			run = b;
 		}
 		
 	}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">DisplayTest</string>
+    <string name="app_name">Ait display</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <color name="red">#CC6677</color>

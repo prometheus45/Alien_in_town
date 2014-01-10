@@ -1,6 +1,5 @@
 package com.example.vertical;
 
-import model.Game;
 
 import com.example.fragments.AliveListFragment;
 import com.example.fragments.ChatFragment;
@@ -9,6 +8,7 @@ import com.example.fragments.DeadListFragment;
 import com.example.fragments.InformationsFragment;
 import com.example.main.UniPageAdapter;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
@@ -17,12 +17,14 @@ public class VerticalPageAdapter extends UniPageAdapter {
 	private DeadListFragment dl;
 	private AliveListFragment al;
 	private ChatInfosFragment ci;
+	Bundle b;
 
-	public VerticalPageAdapter(FragmentManager fm, Game g) {
-		super(fm,g);
-		ci = ChatInfosFragment.newInstance(g);
-		dl = DeadListFragment.newInstance(g);
-		al = AliveListFragment.newInstance(g);
+	public VerticalPageAdapter(FragmentManager fm,Bundle b) {
+		super(fm,b);
+		ci = ChatInfosFragment.newInstance(b);
+		dl = DeadListFragment.newInstance(b);
+		al = AliveListFragment.newInstance(b);
+		this.b = b;
 		POS_ALIVE = 0;
 		POS_DEAD = 2;
 		POS_CHAT = 1;
@@ -44,7 +46,6 @@ public class VerticalPageAdapter extends UniPageAdapter {
 
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return 3;
 	}
 

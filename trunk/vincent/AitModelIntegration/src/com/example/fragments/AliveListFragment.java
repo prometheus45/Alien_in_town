@@ -2,9 +2,6 @@ package com.example.fragments;
 
 import java.util.ArrayList;
 
-import model.Client;
-import model.Game;
-
 import com.example.displaytest.R;
 
 import android.os.Bundle;
@@ -19,15 +16,10 @@ import android.widget.ListView;
 public class AliveListFragment extends ListFragment {
 	
 	private ListView listview;
-	Game g;
 	
-	public static AliveListFragment newInstance(Game g) {
+	public static AliveListFragment newInstance(Bundle b) {
         AliveListFragment f = new AliveListFragment();
-
-        Bundle args = new Bundle();
-        args.putSerializable("game", g);
-        f.setArguments(args);
-
+        f.setArguments(b);
         return f;
     }	
 	
@@ -48,27 +40,20 @@ public class AliveListFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		listview = getListView();
 		if (getArguments() != null){
-			g = (Game) getArguments().getSerializable("game");
-			updateView(g);
+			updateView(getArguments());
 		}else{
 			Log.e("<<<<<<ALIVE>>>>>>", "BUNDLE NULL");
 		}
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public void updateView(Game g){
-		ArrayList<Client> playersAlive = g.getAlive();
-		ArrayList<String> playersAlivesName = new ArrayList<String>();
-		for (int i=0; i<playersAlive.size();i++){
-			playersAlivesName.add(playersAlive.get(i).getAvatar().getName());
+	public void updateView(Bundle b){
+		/*
+		*/
+		ArrayList<String> playersAlivesName = b.getStringArrayList("paName");
+		if (getActivity() != null){
+			ArrayAdapter a = new ArrayAdapter(this.getActivity(),android.R.layout.simple_list_item_1,playersAlivesName);
+			listview.setAdapter(a);
 		}
-		listview.setAdapter(new ArrayAdapter(this.getActivity(),android.R.layout.simple_list_item_1,playersAlivesName));
 	}
-
-	@Override
-	public void onListItemClick(ListView l, View v, int position, long id) {
-		// TODO Auto-generated method stub
-		super.onListItemClick(l, v, position, id);
-	}
-	
 }
